@@ -1,0 +1,44 @@
+<form [formGroup]="form" #userdata="ngForm" (ngSubmit)="onSubmit(userdata.value)">
+
+  <div class="example-container">
+    <mat-form-field appearance="outline">
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input matInput formControlName="lastName">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Social skills</mat-label>
+    <input matInput formControlName="socialSkills">
+  </mat-form-field>
+
+  <div class="example-container" formGroupName="socialAccountsTemp">
+    <div class="example-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Twitter</mat-label>
+        <input matInput formControlName="twitter">
+      </mat-form-field>
+    </div>
+
+    <div class="example-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Linkedin</mat-label>
+        <input matInput formControlName="linkedin">
+      </mat-form-field>
+    </div>
+
+    <div class="example-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Facebook</mat-label>
+        <input matInput formControlName="facebook">
+      </mat-form-field>
+    </div>
+  </div>
+
+    <input type="submit" value="submit">
+</form>
